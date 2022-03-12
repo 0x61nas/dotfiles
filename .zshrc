@@ -108,9 +108,6 @@ bindkey '^[[B' history-substring-search-down
 
 # Aliases
 alias jshell=/usr/lib/jvm/java-17-openjdk/bin/jshell
-alias Data='/media/Data'
-alias Work='/media/Work_files'
-alias University='/media/University'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
