@@ -48,23 +48,6 @@ set $right semicolon
 # set $firstMonitor HDMI-0
 # set $secondMonitor DP0
 
-# Other Examples
-
-#set $firstMonitor DP3
-#set $secondMonitor LVDS1
-
-#set $firstMonitor DVI-I-0
-#set $secondMonitor HDMI-0
-
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
-
-#set $firstMonitor DVI-I-1
-#set $secondMonitor DVI-D-1
-
-#set $firstMonitor HDMI-1
-#set $secondMonitor HDMI-2
-
 # workspace 1 output $firstMonitor
 # workspace 2 output $firstMonitor
 # workspace 3 output $firstMonitor
@@ -148,11 +131,6 @@ mode "$mode_system" {
 
 # bindsym $mod+shift+x exec betterlockscreen -l dim
 
-# ArcoLinux Logout
-
-# bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
-#bindsym $mod+X exec --no-startup-id arcolinux-logout
-
 ################# reload changed configuration     
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -193,7 +171,7 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Left move left 
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
@@ -238,7 +216,6 @@ bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
 
 # change focus between tiling / floating windows
-
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -334,12 +311,7 @@ font pango:Noto Mono Regular 13
 
 # USER APPLICATIONS TO START AT BOOT
 
-# Browser
-# exec --no-startup-id vivaldi-stable
-for_window [class="Vivaldi-stable"] focus
-
 # Text-editor
-# exec --no-startup-id geany
 # exec --no-startup-id atom
 
 # File manager
@@ -350,7 +322,7 @@ for_window [class="Vivaldi-stable"] focus
 
 # Music
 # exec --no-startup-id spotify
-for_window [class="Spotify"] focus
+# for_window [class="Spotify"] focus
 
 # TRAY APPLICATIONS
 
@@ -409,17 +381,6 @@ exec --no-startup-id feh --bg-fill /media/Data/Personalize/Wallpapers/BG4.jpg &
 
 # not workspace related
 
-# ArcoLinux Welcome App
-# bindsym control+mod1+w exec --no-startup-id arcolinux-welcome-app
-
-# ArcoLinux Tweak Tool
-# bindsym control+mod1+e exec --no-startup-id arcolinux-tweak-tool
-
-# conky
-# bindsym $mod+c exec --no-startup-id conky-toggle
-# bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
-# bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
-
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
 bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
@@ -437,26 +398,11 @@ bindsym control+mod1+KP_Enter exec --no-startup-id alacritty; focus
 # catfish
 bindsym control+mod1+c exec --no-startup-id catfish;focus
 
-# arcolinux-logout
-# bindsym control+mod1+k exec --no-startup-id arcolinux-logout
-# bindsym control+mod1+l exec --no-startup-id arcolinux-logout
-
 # rofi theme selector
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
 
-# arcolinux conflict
-# bindsym $mod+m exec --no-startup-id pragha;focus
-
-# htop
-# arcolinux conflict
-# bindsym $mod+h exec --no-startup-id htop;focus
-
 # pavucontrol
 bindsym control+mod1+u exec --no-startup-id pavucontrol
-
-# start xfce-appfinder
-# arcolinux does not seem to work
-# bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
 
 # pamac-manager
 bindsym control+mod1+p exec --no-startup-id pamac-manager
@@ -501,8 +447,6 @@ bindsym control+mod1+b exec --no-startup-id dolphin;focus
 
 # mail application
 bindsym $mod+F9 exec --no-startup-id evolution;focus
-# bindsym $mod+F9 exec --no-startup-id geary;focus
-# bindsym control+mod1+e exec --no-startup-id geary;focus
 
 # music
 bindsym $mod+F10 exec --no-startup-id cmus;focus
@@ -519,9 +463,6 @@ bindsym Control+Print exec --no-startup-id obs
 
 # floating enabled from some programs - find with xprop
 
-for_window [class="Arcolinux-welcome-app.py"] floating enable
-# for_window [class="Arcolinux-tweak-tool.py"] floating enable
-for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Brasero"] floating disable
@@ -557,7 +498,7 @@ for_window [title="Deleting"] floating enable
 for_window [title="Moving"] floating enable
 for_window [title="^Terminator Preferences$"] floating enable
 
-# for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
@@ -616,8 +557,8 @@ bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wal
 
 ################# xbacklight                       
 
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+# bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
 ################# bar toggle                       
 
@@ -631,7 +572,6 @@ hide_edge_borders both
 bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 # changing border style
-# super+t in arcolinux is starting terminal
 bindsym $mod+t border normal
 bindsym $mod+y border pixel 1
 bindsym $mod+u border none
@@ -659,7 +599,7 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer -5
-# smart_gaps on
+smart_gaps on
 # smart_borders on
 
 ################# i3 gaps change                   
@@ -833,9 +773,7 @@ bar {
 
 # NOT USED
 
-# Settings of arcolinux will be applied
 # exec --no-startup-id setxkbmap be
-# exec --no-startup-id setxkbmap us
 exec_always "setxkbmap -model pc101 -layout us,ara -variant ,, -option grp:win_space_toggle"
 
 ################# unclutter                        
