@@ -1,6 +1,12 @@
+ ### EXPORT ###
+export EDITOR='nvim'
+export VISUAL='nvim'
+export TERMINAL='alacritty'
+
 USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
+
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -106,9 +112,15 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# Auto open tmux session
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 # Aliases
 alias jshell=/usr/lib/jvm/java-17-openjdk/bin/jshell
+alias clear='clear && ufetch'
+alias cls='/usr/bin/clear'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 
