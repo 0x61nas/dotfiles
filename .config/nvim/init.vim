@@ -22,6 +22,7 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar theme
 Plug 'https://github.com/nvim-lua/plenary.nvim' " Plenary
 Plug 'https://github.com/nvim-telescope/telescope.nvim' " Finder
 Plug 'https://github.com/tmux-plugins/vim-tmux' " Tmux plugin
+Plug 'glacambre/firenvim' " neovim for browser
 call plug#end()
 
 " NERDTree keybindings
