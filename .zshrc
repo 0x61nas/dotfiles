@@ -1,4 +1,4 @@
- ### EXPORT ###
+### EXPORT ###
 export EDITOR='nvim'
 export VISUAL='nvim'
 export TERMINAL='alacritty'
@@ -113,14 +113,16 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Auto open tmux session
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+# exec tmux
+# fi
 
 # Aliases
 alias jshell=/usr/lib/jvm/java-17-openjdk/bin/jshell
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
+alias JCmusIntegrationWithDiscord='/usr/lib/jvm/jdk-18/bin/java -jar /media/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
+alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
