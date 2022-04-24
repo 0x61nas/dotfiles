@@ -121,7 +121,8 @@ bindkey '^[[B' history-substring-search-down
 alias jshell=/usr/lib/jvm/java-17-openjdk/bin/jshell
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
-alias JCmusIntegrationWithDiscord='/usr/lib/jvm/jdk-18/bin/java -jar /media/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
+alias ls='ls --color=auto'
+alias JCmusIntegrationWithDiscord='java -jar /mnt/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
 alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
