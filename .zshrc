@@ -120,7 +120,7 @@ bindkey '^[[B' history-substring-search-down
 # fi
 
 # Aliases
-alias jshell=/usr/lib/jvm/java-17-openjdk/bin/jshell
+alias jshell=$JAVA_HOME/bin/jshell
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
 alias ls='ls --color=auto'
