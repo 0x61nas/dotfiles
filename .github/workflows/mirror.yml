@@ -3,9 +3,8 @@
 name: Mirror repo
 on: [push]
  
- 
 jobs:
-  repo_name: dotfiles
+  
   mirror:
     runs-on: ubuntu-latest
     steps:
@@ -15,7 +14,7 @@ jobs:
           fetch-depth: 0
        - uses: yesolutions/mirror-action@master
          with:
-            REMOTE: 'https://gitlab.com/Anas-Elgarhy/{{repo_name}}.git'
+            REMOTE: 'https://gitlab.com/Anas-Elgarhy/dotfiles.git'
             GIT_USERNAME: Anas-Elgarhy
             GIT_PASSWORD: ${{ secrets.GITLAP_TOKEN }}
             
@@ -25,7 +24,7 @@ jobs:
           fetch-depth: 0
        - uses: yesolutions/mirror-action@master
          with:
-            REMOTE: 'https://anas_elgarhy@bitbucket.org/anas_elgarhy/{{repo_name}}.git'
+            REMOTE: 'https://anas_elgarhy@bitbucket.org/anas_elgarhy/dotfiles.git'
             REMOTE_NAME: bitbucket
             GIT_USERNAME: anas_elgarhy
             GIT_PASSWORD: ${{ secrets.BITBUCKET_TOKEN }}
@@ -36,7 +35,7 @@ jobs:
           fetch-depth: 0
        - uses: yesolutions/mirror-action@master
          with:
-            REMOTE: 'https://codeberg.org/anas-elgarhy/{{repo_name}}.git'
+            REMOTE: 'https://codeberg.org/anas-elgarhy/dotfiles.git'
             REMOTE_NAME: codeberg
             GIT_USERNAME: anas-elgarhy
             GIT_PASSWORD: ${{ secrets.CODEBERG_TOKEN }}
