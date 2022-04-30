@@ -127,5 +127,10 @@ alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Fix cava not showing bars
+LC_MESSAGES=en_US.UTF-8
+LANGUAGE=en_US
+LANG=en_US.UTF-8
+
 # Auto run
 ufetch
