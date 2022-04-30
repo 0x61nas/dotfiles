@@ -3,6 +3,8 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export TERMINAL='alacritty'
 
+export JAVA_HOME='/usr/lib/jvm/java-18-openjdk'
+
 USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
