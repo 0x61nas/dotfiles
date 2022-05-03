@@ -8,6 +8,8 @@
 :set encoding=UTF-8
 :set clipboard+=unnamedplus " Allow nvim to copy/paste from/to the clipboard"
 
+syntax on " Enable syntax highlighting
+
 " Install vim-plug if not already installed
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
