@@ -1,4 +1,4 @@
-## My configs 😃
+# My configs 😃
 ### I use arch btw 🥰
 
 #### Index
