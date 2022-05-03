@@ -6,6 +6,7 @@
 :set smarttab
 :set softtabstop=4
 :set encoding=UTF-8
+:set clipboard+=unnamedplus " Allow nvim to copy/paste from/to the clipboard"
 
 " Plugins
 call plug#begin()
