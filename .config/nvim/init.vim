@@ -34,7 +34,6 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar theme
 Plug 'https://github.com/nvim-lua/plenary.nvim' " Plenary
 Plug 'https://github.com/nvim-telescope/telescope.nvim' " Finder
 Plug 'https://github.com/tmux-plugins/vim-tmux' " Tmux plugin
-Plug 'glacambre/firenvim' " neovim for browser
 call plug#end()
 
 " NERDTree keybindings
@@ -61,7 +60,6 @@ let g:airline_symbols.linenr = ' LN '
 let g:airline_symbols.colnr = ' CN '
 
 " Vim sence (discord) settings
-let g:vimsence_client_id = '630440518567854110'
 let g:vimsence_small_text = 'NeoVim'
 let g:vimsence_small_image = 'neovim'
 let g:vimsence_editing_details = 'Editing: {}'
