@@ -17,7 +17,7 @@
         .oossssso-````/ossssss+`         Theme: [Plasma], Breeze [GTK2/3]
        -osssssso.      :ssssssso.        Icons: [Plasma], breeze [GTK2/3]
       :osssssss/        osssso+++.       Terminal: alacritty
-     /ossssssss/        +ssssooo/-       CPU: Intel i7-9750H (12) @ 4.500GHz [70.0°C]
+     /ossssssss/        +ssssooo/-       CPU: Intel i7-9750H (12) @ 4.500GHz [53.0°C]
    `/ossssso+/:-        -:/+osssso+-     GPU: NVIDIA GeForce GTX 1660 Ti Mobile
   `+sso+:-`                 `.-/+oso:    Memory: 5995MiB / 15917MiB (37%)
  `++:.                           `-/+/   Battery0: 57% [Unknown]
