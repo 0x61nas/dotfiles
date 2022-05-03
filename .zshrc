@@ -2,8 +2,10 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 export TERMINAL='alacritty'
-
 export JAVA_HOME='/usr/lib/jvm/java-18-openjdk'
+
+### PATH ###
+export PATH="$java_home/bin:$PATH"
 
 USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
@@ -120,14 +122,12 @@ bindkey '^[[B' history-substring-search-down
 # fi
 
 # Aliases
-alias jshell=$JAVA_HOME/bin/jshell
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
 alias ls='ls --color=auto'
 alias JCmusIntegrationWithDiscord='java -jar /mnt/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
 alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Fix cava not showing bars
 LC_MESSAGES=en_US.UTF-8
