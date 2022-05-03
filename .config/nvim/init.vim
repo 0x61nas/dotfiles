@@ -9,6 +9,7 @@ set encoding=UTF-8
 set clipboard+=unnamedplus " Allow nvim to copy/paste from/to the clipboard"
 
 syntax on " Enable syntax highlighting
+set wildmode=longest,list,full " Enable autocompletion
 
 " Install vim-plug if not already installed
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
