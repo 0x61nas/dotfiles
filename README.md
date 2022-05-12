@@ -33,7 +33,7 @@
 
 #### Screenshots 
 ![terminal and tmux and dwm and cava and cmus and zsh and ufetch and cmatrix](./Screenshots/1.png)
-![neovim with a java code](./Screenshots/2.png "NeoVim")
+![neovim with a java code](./Screenshots/neovim.png "NeoVim")
 
 #### Also available on
 - [GitLab](https://gitlab.com/Anas-Elgarhy/dotfiles)
