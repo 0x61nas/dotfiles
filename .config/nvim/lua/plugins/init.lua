@@ -6,6 +6,7 @@ if not present then
 end
 
 local plugins = {
+   ["kovetskiy/sxhkd-vim"] = {}, 
    ["wakatime/vim-wakatime"] = {},
    ["github/copilot.vim"] = {},
    ["nvim-lua/plenary.nvim"] = {},
