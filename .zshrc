@@ -130,7 +130,8 @@ bindkey '^[[B' history-substring-search-down
 # Aliases
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
-alias ls='ls --color=auto'
+alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
+alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
 alias JCmusIntegrationWithDiscord='java -jar /mnt/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
 alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
 
