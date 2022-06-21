@@ -13,6 +13,7 @@ USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
 
+ZSH_THEME="nova"
 
 # Enable colors and change prompt:
 autoload -U colors && colors
