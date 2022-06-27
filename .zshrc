@@ -132,9 +132,10 @@ bindkey '^[[B' history-substring-search-down
 alias clear='clear && ufetch'
 alias cls='/usr/bin/clear'
 alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
-alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
-alias JCmusIntegrationWithDiscord='java -jar /mnt/Work_files/JCmusIntegrationWithDiscord/out/artifacts/JCmusIntegrationWithDiscord_jar/JCmusIntegrationWithDiscord.jar'
-alias cmus='JCmusIntegrationWithDiscord --link &>/dev/null & cmus'
+# alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
+alias jls='jls -lh'
+alias ls='jls'
+alias cmus='cmus-rpc --link &>/dev/null & cmus'
 
 
 # Fix cava not showing bars
