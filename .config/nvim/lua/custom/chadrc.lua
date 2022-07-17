@@ -9,4 +9,10 @@ M.ui = {
    theme = "gruvchad",
 }
 
+local userPlugins = require "custom.plugins"
+
+M.plugins = {
+   user = userPlugins
+}
+
 return M
