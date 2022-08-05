@@ -22,8 +22,8 @@ autoload -U colors && colors
 # PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.% "
 
 # History in cache directory:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
 # Basic auto/tab complete:
@@ -136,6 +136,8 @@ alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
 alias jls='jls -lh'
 alias ls='jls'
 alias cmus='cmus-rpc --link &>/dev/null & cmus'
+alias neofetch='neofetch --kitty /mnt/Data/Personalize/Wallpapers/anime --crop_mode fill --crop_offset center --xoffset 1 --yoffset 1'
+alias nfe='neofetch'
 
 
 # Fix cava not showing bars
