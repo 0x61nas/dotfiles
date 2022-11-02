@@ -1,0 +1,176 @@
+#################################################
+#	███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗		#
+#	██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗	#
+#	███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║	#
+#	╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║	#
+#	███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝	#
+#	╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝		#
+####################By: anas####################
+
+##---------- Keybindings for bspwm ----------##
+
+# Terminal (kitty)
+super + Return
+	kitty
+
+# Terminal (floating)
+super + shift + Return
+	bspc rule -a kitty -o state=floating follow=on center=true rectangle=590x410+0+0 && kitty
+
+# Open application menu
+super + m
+    sh $HOME/.scripts/luncher
+
+# Lockscreen
+super + shift + x
+    betterlockscreen -l
+
+##---------- Applications ----------##
+
+# Lunchers (rofi, dmenu)
+# dmenu
+super + shift + d
+	$HOME/.scripts/run_dmenu
+
+# Dev applications 3>
+super + d; {j,v,l}
+	{jetbrains-toolbox,$TERMINAL -e nvim,$TERMINAL -e lvim}
+
+# Tools
+super + t; {p}
+	sh $HOME/.scripts/xcolor-pick
+
+# Emoji picker
+super + e
+	rofimoji --skin-tone light
+
+# Web browsers
+super + w; {f,c,t}
+	{firefox-developer-edition,google-chrome,tor-browser}
+
+# Chat applications
+super + c; {d,o}
+	{discord,obsidian}
+
+# Personal applications
+super + p; {b,n}
+	{nitrogen,nm-connection-editor}
+
+
+##---------- System Keys ----------##
+
+# Take a screenshot
+Print
+	sh $HOME/.scripts/screenshot
+	
+# Take screenshot in a specific area
+alt + Print	
+	sh $HOME/.scripts/screenshot --region
+
+# Take screenshot of active window
+ctrl + Print
+	sh $HOME/.scripts/screenshot --activewindow
+
+# Take screenshot of area and copy to clipboard
+ctrl + alt + Print
+	sh $HOME/.scripts/screenshot --fullscreen --background --copy-image
+
+# Manage brightness
+XF86MonBrightness{Up,Down}
+    sh $HOME/.scripts/brightness {up,down}
+
+# Manage Volume
+XF86Audio{Raise,Lower}Volume
+    sh $HOME/.scripts/volume {up,down}
+
+XF86AudioMute
+    sh $HOME/.scripts/volume mute
+
+# Music control
+XF86Audio{Next,Prev,Play,Stop}
+	playerctl {next,previous,play-pause,stop}
+
+# Player control
+alt + {F1,F2,F3}
+	playerctl {volume 0.0,volume 0.1-, volume 0.1+}
+
+alt + {Left,Right}
+	playerctl {position 1-,position 1+}
+
+# Mic mute
+XF86AudioMicMute
+		sh $HOME/.scripts/toggle_mic
+
+##---------- Bspwm ----------##
+
+# Close App (super + alt + q)
+super + {_, alt + }q
+	bspc node -{c,k}
+
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# kill window
+ctrl + alt + Escape
+    xkill
+
+# Quit/Restart bspwm
+ctrl + shift + {q,r}
+	bspc {quit,wm -r}
+	
+# Split horizontal, vertical or cancel
+super + shift + {h,v,c}
+	bspc node -p {east,south,cancel}
+
+# Preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Fullscreen or Monocle
+super + f
+#	bspc desktop -l next
+    bspc node -t "~"fullscreen
+
+# Toggle beetwen floating & tiled
+super + shift + s; {f, t, p}
+    bspc node -t "~"{floating,tiled,pseudo_tiled}
+
+# Set the node flags
+super + ctrl + {m,x,s,p}
+	bspc node -g {marked,locked,sticky,private}
+
+# Send the window to another edge of the screen
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch workspace
+super + ctrl + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch to last opened workspace
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+
+# Send focused window to another workspace
+super + {_,shift + }{1-9, 0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Expanding windows
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+	
+## Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+	
+## Move floating windows
+alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}	
+
+##---------- EOF ----------##
+
