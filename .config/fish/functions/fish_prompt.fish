@@ -1,3 +1,5 @@
+source $HOME/.config/fish/functions/fish_wakatime.sh
+
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
     set -l normal (set_color normal)
@@ -28,3 +30,4 @@ function fish_prompt --description 'Write out the prompt'
     echo -s (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
     echo -n -s $status_color $suffix ' ' $normal
 end
+

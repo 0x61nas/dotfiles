@@ -4,8 +4,14 @@ set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR "nvim"                                 # $EDITOR use nvim in terminal
 set VISUAL "neovide"                              # $VISUAL use neovide in GUI mode
 
+source $HOME/.config/fish/completions/*
 source $HOME/.config/fish/functions/functions.fish # Loads the functions file
 source $HOME/.config/fish/aliases.sh            # Loads the aliases file
+
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
 
 
 ### SET MANPAGER

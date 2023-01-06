@@ -41,3 +41,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR fish_user_paths:/snap/bin\x1e/home/anas/\x2elocal/bin\x1e/home/anas/Android/Sdk/platform\x2dtools\x1e/home/anas/\x2ecargo/bin\x1e/home/anas/\x2escripts

@@ -4,7 +4,7 @@ alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
 # alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
 alias jls='jls -lh'
 alias ls='jls'
-alias cmus='cmus-rpc-rs --link &>/dev/null & cmus'
+alias cmus='cmus-rpc-rs --link &>/dev/null & /bin/cmus'
 alias neofetch='neofetch --kitty /mnt/Data/Personalize/Wallpapers/anime --crop_mode fill --crop_offset center --xoffset 1 --yoffset 1'
 alias nfe='neofetch'
 
