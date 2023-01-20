@@ -1,0 +1,11 @@
+{
+  "interval" : 1000,
+  "caverImage" : "cmus",
+  "playIcon" : "play_icon_1",
+  "pauseIcon" : "pause_icon_2",
+  "partOneFormat" : "%title%",
+  "partTowFormat" : "from %album% by %artist%",
+  "sleepTime" : 300000,
+  "debug" : false,
+  "link" : false
+}
