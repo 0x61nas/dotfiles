@@ -7,6 +7,7 @@ set VISUAL "neovide"                              # $VISUAL use neovide in GUI m
 source $HOME/.config/fish/completions/*
 source $HOME/.config/fish/functions/functions.fish # Loads the functions file
 source $HOME/.config/fish/aliases.sh            # Loads the aliases file
+source $HOME/.config/nnn/config.sh
 
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
@@ -45,3 +46,4 @@ set fish_color_param brcyan
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+thefuck --alias | source
