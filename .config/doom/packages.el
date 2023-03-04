@@ -56,8 +56,3 @@
 ; Wakatime
 (package! wakatime-mode
   :recipe (:host github :repo "wakatime/wakatime-mode" :files ("*.el")))
-
-; Treemacs
-(package! treemacs)
-; Treemacs evil
-(package! treemacs-evil)
