@@ -1,13 +1,17 @@
 source "$HOME/.config/shell/public-env.sh"
 source "$HOME/.config/shell/aliases.sh"
+source "$HOME/.config/shell/utils.sh"
 
 USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
+setopt dvorak    # Use the Dvorak keyboard instead of the standard qwerty keyboard
+setopt correctall # Try to correct the spelling of all arguments in a line.
+setopt aliases    # Expand aliases
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.% "
 
