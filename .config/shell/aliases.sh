@@ -7,6 +7,7 @@ alias nfe='neofetch'
 
 # navigation
 alias ~='cd ~'
+alias .-='cd -'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -24,15 +25,16 @@ alias e="$EDITOR"
 alias r='bat'
 
 # Git
-alias gp='git push'
+alias push='git push'
 alias commit='git commit -S'
 alias clone='git clone'
+alias add='git add'
+alias status='git status'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
 
 # confirm before overwriting something
 alias cp="cp -i"
