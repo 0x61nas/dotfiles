@@ -7,6 +7,7 @@ set VISUAL "neovide"                              # $VISUAL use neovide in GUI m
 source $HOME/.config/fish/completions/*
 source $HOME/.config/fish/functions/functions.fish # Loads the functions file
 source $HOME/.config/shell/aliases.sh            # Loads the aliases file
+clear
 source $HOME/.config/nnn/config.sh
 
 export GTK_IM_MODULE="fcitx"
@@ -45,7 +46,7 @@ set fish_color_error '#ff6c6b'
 set fish_color_param brcyan
 
 ### SETTING THE STARSHIP PROMPT ###
-starship init fish | source
+# starship init fish | source
 thefuck --alias | source
 
 # pnpm
@@ -54,3 +55,9 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Auto run
+echo "Don't worry I'm here for you <3"
+oh-my-posh init fish --config ~/.config/ohmyposh/1_shell.omp.json | source
+
+
