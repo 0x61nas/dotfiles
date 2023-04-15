@@ -12,9 +12,20 @@ export XDG_STATE_HOME=$HOME/.local/state
 export EDITOR='lvim'
 export VISUAL="lvim"
 
+export HISTCONTROL=ignoreboth:erasedups
+export PAGER='bat'
+
 export JAVA_HOME='/usr/lib/jvm/java-19-openjdk'
 ### PATH ###
 # export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:$PATH"
+if [ -d "$HOME/.bin" ] ;
+  then PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+
 export PATH="$JAVA_HOME/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/Android/Sdk/platform-tools:$PATH"
 export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.config/emacs/bin:$HOME/.emacs.d/bin:$PATH"
