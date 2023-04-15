@@ -1,19 +1,9 @@
-### EXPORT ###
-export EDITOR='nvim'
-export VISUAL='nvim'
-export TERMINAL='alacritty'
-export JAVA_HOME='/usr/lib/jvm/java-18-openjdk'
-# ls colors from https://github.com/body20002/nova/blob/main/nova.zsh-theme + *.jar and *.mp4, *.mkv from me :D
-export LS_COLORS='no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.jar=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.mp4=01;35:*.mkv=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:'
-
-### PATH ###
-export PATH="$java_home/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.scripts:$PATH"
+source "$HOME/.config/shell/public-env.sh"
+source "$HOME/.config/shell/aliases.sh"
 
 USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
-
-ZSH_THEME="nova"
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -22,9 +12,9 @@ autoload -U colors && colors
 # PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.% "
 
 # History in cache directory:
-HISTSIZE=100000
-SAVEHIST=100000
-HISTFILE=~/.zsh_history
+HISTSIZE=1000000000
+SAVEHIST=1000000000
+HISTFILE=~/.shell_history
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -40,20 +30,11 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 ## Plugins section: 
 # Enable fish style features
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Wakatime plugin:
-source $HOME/.oh-my-zsh/custom/plugins/wakatime/wakatime.plugin.zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Use syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Use history substring search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
 # Offer to install missing package if command is not found
@@ -61,11 +42,6 @@ if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
     source /usr/share/zsh/functions/command-not-found.zsh
     export PKGFILE_PROMPT_INSTALL_MISSING=1
 fi
-
-# Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Key bindings section
 # vi mode
@@ -128,28 +104,12 @@ bindkey '^[[B' history-substring-search-down
 # exec tmux
 # fi
 
-# Aliases
-alias clear='clear && ufetch'
-alias cls='/usr/bin/clear'
-alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
-# alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
-alias jls='jls -lh'
-alias ls='jls'
-alias cmus='cmus-rpc-rs --link &>/dev/null & cmus'
-alias neofetch='neofetch --kitty /mnt/Data/Personalize/Wallpapers/anime --crop_mode fill --crop_offset center --xoffset 1 --yoffset 1'
-alias nfe='neofetch'
-
-
 # Fix cava not showing bars
 LC_MESSAGES=en_US.UTF-8
 LANGUAGE=en_US
 LANG=en_US.UTF-8
 
 # Auto run
-ufetch
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-eval "$(starship init zsh)"
+echo "Don't worry I'm here for you <3"
+# eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/1_shell.omp.json)"
