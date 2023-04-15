@@ -20,7 +20,13 @@ alias .='jpwd'
 # Edit something
 alias e="$EDITOR"
 
+# Read the file
 alias r='bat'
+
+# Git
+alias gp='git push'
+alias commit='git commit -S'
+alias clone='git clone'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
