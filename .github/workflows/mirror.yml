@@ -39,3 +39,14 @@ jobs:
             REMOTE_NAME: codeberg
             GIT_USERNAME: anas-elgarhy
             GIT_PASSWORD: ${{ secrets.CODEBERG_TOKEN }}
+
+       - name: mirror in git.disroot
+         uses: actions/checkout@v3
+         with: 
+          fetch-depth: 0
+       - uses: yesolutions/mirror-action@master
+         with:
+            REMOTE: 'https://git.disroot.org/anas-elgarhy/dotfiles.git'
+            REMOTE_NAME: disroot
+            GIT_USERNAME: anas-elgarhy
+            GIT_PASSWORD: ${{ secrets.DISROOT_TOKEN }}
