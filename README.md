@@ -1,5 +1,7 @@
 ### Screenshots 
-![](./Screenshots/zsh-neofetch-kitty-cmus-notify-v0.2.png)
+![](./Screenshots/zsh-neofetch-kitty-cmus-notify-v0.3.png)
+![](./Screenshots/zsh-neofetch-kitty-cava-tty_clock-v0.3.png)
+![](./Screenshots/zsh-kitty-v0.3.png)
 
 ### Also available on
 * [GitLab](https://gitlab.com/Anas-Elgarhy/dotfiles)
