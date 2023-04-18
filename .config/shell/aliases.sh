@@ -30,6 +30,8 @@ alias commit='git commit -S'
 alias clone='git clone'
 alias add='git add'
 alias status='git status'
+alias pull='git pull'
+alias fetch='git fetch'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
