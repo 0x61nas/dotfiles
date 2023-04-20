@@ -26,5 +26,6 @@ HISTFILE=~/.shell_history
 
 # Auto run
 echo "Don't worry I'm here for you <3"
+eval "$(github-copilot-cli alias -- "$0")" # Setup the github-copilot-cli alias `??`
 # eval "$(starship init bash)"
 # eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/1_shell.omp.json)"
