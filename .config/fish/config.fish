@@ -47,7 +47,7 @@ set fish_color_param brcyan
 
 ### SETTING THE STARSHIP PROMPT ###
 # starship init fish | source
-thefuck --alias | source
+# thefuck --alias | source
 
 # pnpm
 set -gx PNPM_HOME "/home/anas/.local/share/pnpm"
