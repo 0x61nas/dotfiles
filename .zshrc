@@ -115,5 +115,6 @@ LANG=en_US.UTF-8
 
 # Auto run
 echo "Don't worry I'm here for you <3"
+eval "$(github-copilot-cli alias -- "$0")" # Setup the github-copilot-cli alias `??`
 # eval "$(starship init zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/1_shell.omp.json)"
