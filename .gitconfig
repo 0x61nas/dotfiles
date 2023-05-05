@@ -6,7 +6,7 @@
 # URL ALIASES
 # -----------
 # Alias for my mian account
-[url "https://github.com/anas-elgarhy/"]
+[url "git@github.com:anas-elgarhy/"]
   insteadOf = me://
 # COLORS
 # ------
@@ -50,3 +50,8 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
+[user]
+	name = Anas Elgarhy
+	email = anas.elgarhy.dev@gmail.com
+[core]
+	editor = lvim
