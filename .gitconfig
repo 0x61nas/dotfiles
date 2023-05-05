@@ -8,6 +8,9 @@
 # Alias for my mian account
 [url "git@github.com:anas-elgarhy/"]
   insteadOf = me://
+# Alias for AUR
+[url "ssh://aur@aur.archlinux.org/"]
+  insteadOf = aur://
 # COLORS
 # ------
 # Dracula Dark Theme
