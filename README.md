@@ -11,7 +11,7 @@
 
 ### other
 #### Browser
-* If u want to put the tabs on the bottom of the window on Firefox then u have to move the [userChrome.css](./.mozilla/firefox/chrome/userChrome.css) file into ur Firefox user directory(u can find it in `~/.mozilla/firefox/`) in the `chrome` dir or create it if doesn't exist, and then u have to enable the `legacy user profile customizations stylesheets feature from [about:config](about: config)
+* If u want to put the tabs on the bottom of the window on Firefox then u have to move the [userChrome.css](./.mozilla/firefox/chrome/userChrome.css) file into ur Firefox user directory(u can find it in `~/.mozilla/firefox/`) in the `chrome` dir or create it if doesn't exist, and then u have to enable the `legacy user profile customizations stylesheets feature from [about:config](about:config)
 
 ## Also available on
 * [GitLab](https://gitlab.com/Anas-Elgarhy/dotfiles)
