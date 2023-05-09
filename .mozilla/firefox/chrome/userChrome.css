@@ -1,0 +1,36 @@
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+	/* tabs on bottom of window */
+	/* requires that you set
+	 * toolkit.legacyUserProfileCustomizations.stylesheets = true
+	 * in about:config
+	 */
+	#main-window body { flex-direction: column-reverse !important; }
+	#navigator-toolbox { flex-direction: column-reverse !important; }
+	#urlbar {
+		top: unset !important;
+		bottom: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+		box-shadow: none !important;
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	#urlbar-input-container {
+		order: 2;
+	}
+	#urlbar > .urlbarView {
+		order: 1;
+		border-bottom: 1px solid #666;
+	}
+	#urlbar-results {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.search-one-offs { display: none !important; }
+	.tab-background { border-top: none !important; }
+	#navigator-toolbox::after { border: none; }
+	#TabsToolbar .tabbrowser-arrowscrollbox,
+	#tabbrowser-tabs, .tab-stack { min-height: 28px !important; }
+	.tabbrowser-tab { font-size: 80%; }
+	.tab-content { padding: 0 5px; }
+	.tab-close-button .toolbarbutton-icon { width: 12px !important; height: 12px !important; }
+	toolbox[inFullscreen=true] { display: none; }
+}
