@@ -9,6 +9,10 @@
     > I notch that the disable touchpad while typing option doesn't work with me when I trayd synaptics idk why but it works just fine with libinput
 * When u use ur laptop as a daily driver then u may be concerned about the battery life (especially when u using a gaming laptop) and if ur laptop is from Lenovo like me u maybe used to have control over the charger to select a specific percentage for the battery and when the battery reaches it the laptop will stop the charging and it'll run on the charger only without taking anything from the battery and u save your battery life by reducing the charging cycles and the all is happy :D, so u can use [tlp][tlp on arch wiki] for this job and u can see(or steal) my configure from [tlp.conf](./etc/tlp.conf) which is just the default one with enabling the threshold mode to stop charging at 60%
 
+### other
+#### Browser
+* If u want to put the tabs on the bottom of the window on Firefox then u have to move the [userChrome.css](./.mozilla/firefox/chrome/userChrome.css) file into ur Firefox user directory(u can find it in `~/.mozilla/firefox/`) in the `chrome` dir or create it if doesn't exist, and then u have to enable the `legacy user profile customizations stylesheets feature from [about:config](about: config)
+
 ## Also available on
 * [GitLab](https://gitlab.com/Anas-Elgarhy/dotfiles)
 * [BitBucket](https://bitbucket.org/anas_elgarhy/dotfiles)
