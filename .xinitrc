@@ -32,13 +32,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# gnupg keyring agent
-# ensure it's started so SSH will work
-# https://www.gnupg.org/faq/whats-new-in-2.1.html#autostart
-dbus-update-activation-environment --systemd DISPLAY
-gpgconf --launch gpg-agent
-export "SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
-# Keyboard layouts switch (requires setxkbmap)
-setxkbmap -model pc104 -layout us,ar,jp,kr -variant dvorak-l,,, -option grp:win_space_toggle
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
-exec dwm 2> .logs/dwm.err > .logs/dwm.log
+exec yo-dwm 2> .logs/yo-dwm.err > .logs/yo-dwm.log
