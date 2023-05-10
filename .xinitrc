@@ -41,4 +41,4 @@ export "SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
 # Keyboard layouts switch (requires setxkbmap)
 setxkbmap -model pc104 -layout us,ar,jp,kr -variant dvorak-l,,, -option grp:win_space_toggle
 
-exec dwm
+exec dwm 2> .logs/dwm.err > .logs/dwm.log
