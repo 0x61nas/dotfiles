@@ -1,6 +1,7 @@
 source "$HOME/.config/shell/public-env.sh"
 source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/utils.sh"
+source "$HOME/.config/shell/setup.sh"
 
 PS1='[\u@\h \W]\$ '
 
@@ -24,8 +25,3 @@ HISTSIZE=1000000000
 SAVEHIST=1000000000
 HISTFILE=~/.shell_history
 
-# Auto run
-echo "Don't worry I'm here for you <3"
-eval "$(github-copilot-cli alias -- "$0")" # Setup the github-copilot-cli alias `??`
-# eval "$(starship init bash)"
-# eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/1_shell.omp.json)"
