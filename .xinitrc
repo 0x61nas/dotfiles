@@ -35,4 +35,4 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-exec yo-dwm 2> .logs/yo-dwm.err > .logs/yo-dwm.log
+exec archy-dwm 2> .logs/archy-dwm.err > .logs/archy-dwm.log
