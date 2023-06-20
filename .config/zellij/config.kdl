@@ -2,7 +2,7 @@
 keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt c" { Copy; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -76,7 +76,7 @@ keybinds {
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt c" { Copy; }
     }
     search {
         bind "Ctrl s" { SwitchToMode "Normal"; }
@@ -181,14 +181,14 @@ plugins {
 //   - detach (Default)
 //   - quit
 //
-// on_force_close "quit"
+on_force_close "detach"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui false
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -220,26 +220,19 @@ default_layout "compact"
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
 // potentially interfere with copying text.
-// Options:
-//   - true (default)
-//   - false
-//
-// mouse_mode false
+mouse_mode true
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
 // buffer. Excess number of lines are discarded in a FIFO fashion.
 // Valid values: positive integers
-// Default value: 10000
-//
-// scroll_buffer_size 10000
+scroll_buffer_size 100000
 
 // Provide a command to execute when copying text. The text will be piped to
 // the stdin of the program to perform the copy. This can be used with
 // terminal emulators which do not support the OSC 52 ANSI control sequence
 // that will be used by default if this option is not set.
 // Examples:
-//
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
@@ -251,12 +244,10 @@ default_layout "compact"
 //   - system (default)
 //   - primary
 //
-// copy_clipboard "primary"
+copy_clipboard "system"
 
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
-// Default: true
-//
-// copy_on_select false
+copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
@@ -266,9 +257,7 @@ default_layout "compact"
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
-// Default: false
-//
-// mirror_session true
+mirror_session false
 
 // The folder in which Zellij will look for layouts
 //
