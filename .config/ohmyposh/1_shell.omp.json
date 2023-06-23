@@ -37,6 +37,9 @@
         },
         {
           "foreground": "#a9ffb4",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ef5350{{ end }}"
+          ],
           "properties": {
             "style": "dallas",
             "threshold": 0
@@ -75,16 +78,16 @@
       "segments": [
         {
           "foreground": "#ffafd2",
-          "leading_diamond": "<#00c7fc> \ue285 </><#ffafd2>{</>",
+          "leading_diamond": "<#00c7fc> \ue285",
           "properties": {
             "folder_icon": "\uf07b",
-            "folder_separator_icon": "\uf9e0",
+            "folder_separator_icon": "</><#ffffff>:</>",
             "home_icon": "home",
             "style": "agnoster_full"
           },
           "style": "diamond",
           "template": " \ue5ff {{ .Path }} ",
-          "trailing_diamond": "<#ffafd2>}</>",
+          "trailing_diamond": "",
           "type": "path"
         },
         {
@@ -96,7 +99,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " \ue286 ",
+          "template": "| ",
           "type": "exit"
         }
       ],
