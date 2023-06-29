@@ -31,3 +31,6 @@ export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.config/emacs/bin:$HOME/.emacs.d/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+### cargo ###
+export CARGO_TARGET_DIR=$HOME/.cargo-target
