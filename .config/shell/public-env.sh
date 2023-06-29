@@ -25,12 +25,13 @@ fi
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
-export PATH="$HOME/.local/share/bin:$PATH"
-export PATH="$JAVA_HOME/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/Android/Sdk/platform-tools:$PATH"
-export PATH="$HOME/.scripts:$PATH"
-export PATH="$HOME/.config/emacs/bin:$HOME/.emacs.d/bin:$PATH"
-export PATH="/snap/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.local/share/bin"
+export PATH="$PATH:$JAVA_HOME/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/Android/Sdk/platform-tools"
+export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/.config/emacs/bin:$HOME/.emacs.d/bin"
+export PATH="$PATH:/snap/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
 ### cargo ###
 export CARGO_TARGET_DIR=$HOME/.cargo-target
