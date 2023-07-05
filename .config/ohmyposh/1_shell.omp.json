@@ -12,17 +12,106 @@
             "display_host": true
           },
           "style": "diamond",
-          "template": "{{ .UserName }} <#ffffff>on</>",
+          "template": "{{ .UserName }} <#ffffff>at</>",
           "type": "session"
         },
         {
           "foreground": "#bc93ff",
           "properties": {
-            "time_format": "Monday <#ffffff>at</> 3:04 PM"
+            "time_format": "3:04:05 PM"
           },
           "style": "diamond",
           "template": " {{ .CurrentDate | date .Format }} ",
           "type": "time"
+        },
+        {
+          "foreground": "#06aad5",
+          "style": "plain",
+          "template": "<#ffffff>go </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "go"
+        },
+        {
+          "foreground": "#925837",
+          "style": "plain",
+          "template": "<#ffffff>rust </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "rust"
+        },
+        {
+          "foreground": "#3C873A",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+          "style": "plain",
+          "template": "<#ffffff>node </>{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}<#ffffff></>",
+          "type": "node"
+        },
+        {
+          "foreground": "#FFE873",
+          "style": "plain",
+          "template": "<#ffffff>python </>{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "python"
+        },
+        {
+          "foreground": "#ec2729",
+          "style": "plain",
+          "template": "<#ffffff>java </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "java"
+        },
+        {
+          "foreground": "#0d6da8",
+          "style": "plain",
+          "template": "<#ffffff>dotnet </>{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "dotnet"
+        },
+        {
+          "foreground": "#055b9c",
+          "style": "plain",
+          "template": "<#ffffff>dart </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "dart"
+        },
+        {
+          "foreground": "#ce092f",
+          "style": "plain",
+          "template": "<#ffffff>angular </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "angular"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#1e293b>nx </>{{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}<#1e293b></>",
+          "type": "nx"
+        },
+        {
+          "foreground": "#359a25",
+          "style": "plain",
+          "template": "<#ffffff>julia </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "julia"
+        },
+        {
+          "foreground": "#9c1006",
+          "style": "plain",
+          "template": "<#ffffff>ruby </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "ruby"
+        },
+        {
+          "foreground": "#5398c2",
+          "style": "plain",
+          "template": "<#ffffff>azfunc </>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#ffffff></>",
+          "type": "azfunc"
+        },
+        {
+          "foreground": "#faa029",
+          "style": "plain",
+          "template": "<#ffffff>aws </>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<#ffffff></>",
+          "type": "aws"
+        },
+        {
+          "foreground": "#316ce4",
+          "style": "plain",
+          "template": "<#ffffff>kubectl </>{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<#ffffff></>",
+          "type": "kubectl"
         }
       ],
       "type": "prompt"
@@ -78,15 +167,15 @@
       "segments": [
         {
           "foreground": "#ffafd2",
-          "leading_diamond": "<#00c7fc> \ue285",
+          "leading_diamond": "<#00c7fc> \ue285 </>",
           "properties": {
-            "folder_icon": "\uf07b",
+            "folder_icon": "..",
             "folder_separator_icon": "</><#ffffff>:</>",
-            "home_icon": "home",
-            "style": "agnoster_full"
+            "home_icon": "~",
+            "style": "letter"
           },
           "style": "diamond",
-          "template": " \ue5ff {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "trailing_diamond": "",
           "type": "path"
         },
