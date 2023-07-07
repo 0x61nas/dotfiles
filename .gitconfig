@@ -8,9 +8,6 @@
 # Alias for my mian account
 [url "git@github.com:anas-elgarhy/"]
   insteadOf = me://
-# Alias for AUR
-[url "ssh://aur@aur.archlinux.org/"]
-  insteadOf = aur://
 # COLORS
 # ------
 # Dracula Dark Theme
@@ -57,4 +54,56 @@
 	name = Anas Elgarhy
 	email = anas.elgarhy.dev@gmail.com
 [core]
-	editor = lvim
+  editor = lvim
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[credential]
+	helper = store
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[rebase]
+	autoStash = true
+
+[alias]
+  # allows you to switch branches quickly. For example, `git co master` instead of `git checkout master`
+  co = checkout
+  # simplifying the commit process. For example, `git ci -m "Commit message"` instead of `git commit -m "Commit message"`
+  ci = commit
+  # helping you create branches faster. For example, `git br feature` instead of `git branch feature`.
+  br = branch
+  st = status
+  df = diff
+	lg = log --pretty=\"%C(magenta)%h%Creset %C(yellow)%d%Creset%s %C(bold cyan)(%ar)%Creset\"
+  lgg = lg --abbrev-commit --all --graph
+  unstage = reset HEAD
+  last = log -1 HEAD
+  undo = reset HEAD~
+  pushf = push --force
+  squash = !git rebase -i HEAD~$1
+  amend = commit --amend
+  aliases = config --get-regexp alias
+  brl = !git for-each-ref --format='%(refname:short) %(objectname:short)' refs/heads/
+  uncommit = reset HEAD^
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  ff = merge --ff-only
+  shelve = !git stash && git checkout
+  unshelve = stash apply && git stash drop
+  sync = !git fetch && git rebase origin/$(git symbolic-ref --short HEAD)
+  upstream = branch --set-upstream-to
+  ignore = !echo "$1" >> .gitignore
