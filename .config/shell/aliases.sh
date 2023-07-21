@@ -1,7 +1,8 @@
 alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
 # alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
 alias jls='jls -lh'
-alias ls='jls'
+alias ls='exa --icons'
+alias l ='ls -lh'
 alias neofetch='neofetch --kitty /mnt/Data/Personalize/Wallpapers --crop_mode fill --crop_offset center --xoffset 1 --yoffset 1'
 alias nfe='neofetch'
 
