@@ -1,0 +1,6 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{+b m}(%{W}%n*%f%t%?(%u)%?%{m})%{-b w}%?%+Lw%?%?%= %{g}][%{c} %D %M %d %{g}%c %{g}]'
+# By default, screen uses an 8-color terminal emulator. Use the
+term screen-256color
+defscrollback 10000
+
