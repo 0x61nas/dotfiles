@@ -20,6 +20,12 @@ PATH DEFAULT=${PATH}:@{HOME}/.cargo/bin
 PATH DEFAULT=${PATH}:@{HOME}/.npm-global/bin
 PATH DEFAULT=${PATH}:@{HOME}/.local/bin
 PATH DEFAULT=${PATH}:@{HOME}/.gem/ruby/3.0.0/bin
+PATH DEFAULT=${PATH}:${HOME}/.local/share/bin
+PATH DEFAULT=${PATH}:@{HOME}/.scripts
+PATH DEFAULT=${PATH}:@{HOME}/.config/emacs/bin
+PATH DEFAULT=${PATH}:/snap/bin
+PATH DEFAULT=${PATH}:@{HOME}/.local/share/JetBrains/Toolbox/scripts
+PATH DEFAULT=${PATH}:@{HOME}/Android/Sdk/platform-tools
 
 # Globals
 TZ=Africa/Cairo
