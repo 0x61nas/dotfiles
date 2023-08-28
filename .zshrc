@@ -1,4 +1,3 @@
-source "$HOME/.config/shell/public-env.sh"
 source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/utils.sh"
 source "$HOME/.config/shell/setup.sh"
