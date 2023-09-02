@@ -3,8 +3,6 @@ alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
 alias jls='jls -lh'
 alias ls='exa --icons'
 alias l='ls -lh'
-alias neofetch='neofetch --kitty /mnt/Data/Personalize/Wallpapers --crop_mode fill --crop_offset center --xoffset 1 --yoffset 1'
-alias nfe='neofetch'
 
 # navigation
 alias ~='cd ~'
@@ -25,7 +23,22 @@ alias e="$EDITOR"
 # Read the file
 alias r='bat'
 
+# General
+alias c='cargo'
+alias ct='cargo test'
+alias m='make'
+alias o='xdg-open'
+alias vimdiff='nvim -d'
+
+# Keybase
+alias ks='keybase chat send'
+alias ksr='keybase chat read'
+alias kl='keybase chat list'
+
+
 # Git
+alias g='git'
+alias gc='git checkout'
 alias push='git push'
 alias commit='git commit -S'
 alias clone='git clone'
@@ -33,6 +46,8 @@ alias add='git add'
 alias status='git status'
 alias pull='git pull'
 alias fetch='git fetch'
+alias gah='git stash && git pull --rebase && git stash pop'
+alias pr='gh pr create -t $(git show -s --format=%s HEAD) -b $(git show -s --format=%B HEAD | tail -n+3)'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -44,14 +59,18 @@ alias cp="cp -i"
 alias mv='mv -i'
 # alias rm='rm -i'
 
-# Update
-alias fuck-my-lap='sudo pacman -Syyu'
-
-
 #youtube download
 alias yta-aac="yt-dlp --extract-audio --audio-format aac "
 alias yta-best="yt-dlp --extract-audio --audio-format best "
 alias yta-flac="yt-dlp --extract-audio --audio-format flac "
 alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+
+# Arch
+alias i='aurman -S'
+alias s='aurman -Ss'
+alias u='aurman -Sy'
+alias r='aurman -Rns'
+alias fuck-my-lap='sudo pacman -Syyu'
+
 
