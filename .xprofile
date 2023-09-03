@@ -24,4 +24,6 @@ nm-applet &
 copyq &
 # sticky keys script
 stickykeys &
+# Start a new terminal with tmux
+$TERMINAL -e tmux &
 
