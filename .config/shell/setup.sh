@@ -1,4 +1,5 @@
 PROMPT=ohmyposh
+AURHELPER=paru
 # Fix cava not showing bars
 LC_MESSAGES=en_US.UTF-8
 LANGUAGE=en_US
