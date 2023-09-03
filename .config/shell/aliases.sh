@@ -29,6 +29,9 @@ alias ct='cargo test'
 alias m='make'
 alias o='xdg-open'
 alias vimdiff='nvim -d'
+alias bash='SHELL=bash bash'
+alias zsh='SHELL=zsh zsh'
+alias fish='SHELL=fish fish'
 
 # Keybase
 alias ks='keybase chat send'
@@ -67,10 +70,22 @@ alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
 # Arch
-alias i='aurman -S'
-alias s='aurman -Ss'
-alias u='aurman -Sy'
-alias r='aurman -Rns'
+install() {
+    $SUDO pacman -S $@ || $AURHELPER -S $@
+}
+search() {
+    pacman -Ss $@ || $AURHELPER -Ss $@
+}
+update() {
+    $SUDO pacman -Su || $AURHELPER -Su
+}
+remove() {
+    $SUDO pacman -Rns $@
+}
+alias i='install'
+alias s='search'
+alias u='update'
+alias un='remove'
 alias fuck-my-lap='sudo pacman -Syyu'
 
 
