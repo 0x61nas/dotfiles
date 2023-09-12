@@ -1,7 +1,7 @@
 alias lsc='/usr/bin/ls --color=auto' # Default ls with colors
 # alias ls='logo-ls -Dh' # Modern ls https://github.com/Yash-Handa/logo-ls
 alias jls='jls -lh'
-alias ls='exa --icons'
+alias ls='eza --icons'
 alias l='ls -lh'
 
 # navigation
