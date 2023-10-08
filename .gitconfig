@@ -13,6 +13,7 @@
 [user]
 	name = Anas Elgarhy
 	email = anas.elgarhy.dev@gmail.com
+	signingkey = 0E4F7AB7210FA2856F1AAD7E38442349DD00D8C6
 [core]
   editor = nvim
   pager = delta
@@ -62,7 +63,7 @@
   undo = reset HEAD~
   pushf = push --force
   squash = !git rebase -i HEAD~$1
-  amend = commit --amend
+  amend = commit --amend -S
   aliases = config --get-regexp alias
   brl = !git for-each-ref --format='%(refname:short) %(objectname:short)' refs/heads/
   uncommit = reset HEAD^
@@ -72,4 +73,6 @@
   unshelve = stash apply && git stash drop
   sync = !git fetch && git rebase origin/$(git symbolic-ref --short HEAD)
   upstream = branch --set-upstream-to
-  ignore = !echo "$1" >> .gitignore
+	ignore = !echo "$1" >> .gitignore
+	rebase = rebase -S
+
