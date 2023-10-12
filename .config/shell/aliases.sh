@@ -20,7 +20,7 @@ alias .='pwd'
 # Edit something
 alias e="$EDITOR"
 
-# Read the file
+# Read file
 alias r='bat'
 
 # General
@@ -29,6 +29,7 @@ alias ct='cargo test'
 alias m='make'
 alias o='xdg-open'
 alias vimdiff='nvim -d'
+alias clip='xclip -selection clipboard'
 alias bash='SHELL=bash bash'
 alias zsh='SHELL=zsh zsh'
 alias fish='SHELL=fish fish'
