@@ -7,15 +7,11 @@
 #	╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝		#
 ####################By: anas####################
 
-##---------- Keybindings for bspwm ----------##
+##---------- Keybindings for WM ----------##
 
-# Terminal (kitty)
+# Terminal
 super + Return
 	$TERMINAL
-
-# Open application menu
-super + m
-    sh $HOME/.scripts/luncher
 
 # Lockscreen
 super + shift + x
@@ -28,22 +24,13 @@ super + shift + x
 super + p
 	$HOME/.scripts/dmenu_run
 
-# Tools
-super + t; {p}
-	sh $HOME/.scripts/xcolor-pick
-
-
 # Web browsers
 super + w; {f,c,t}
 	{firefox-developer-edition,google-chrome,tor-browser}
 
-# Chat applications
-super + shiftr; {d,o}
+# applications
+super + shift; {d,o}
 	{discord,obsidian}
-
-# Personal applications
-super + shift; {b,n}
-	{nitrogen,nm-connection-editor}
 
 
 ##---------- System Keys ----------##
