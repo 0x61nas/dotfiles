@@ -2,7 +2,6 @@ source "$HOME/.config/shell/aliases.sh"
 source "$HOME/.config/shell/utils.sh"
 source "$HOME/.config/shell/setup.sh"
 
-USE_POWERLINE="true"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
 setopt dvorak    # Use the Dvorak keyboard instead of the standard qwerty keyboard
@@ -34,6 +33,8 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 ## Plugins section: 
 # Enable fish style features
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '^ ' autosuggest-toggle
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -107,4 +108,7 @@ bindkey '^[[B' history-substring-search-down
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 # exec tmux
 # fi
+
+# OCaml
+# [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
