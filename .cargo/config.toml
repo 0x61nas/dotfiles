@@ -8,6 +8,11 @@ nl = "new --lib"
 jobs = 12                      # number of parallel jobs, defaults to # of CPUs
 incremental = true            # whether or not to enable incremental compilation
 
+[profile.release]
+opt-level = 3 # all optmizations
+lto = true # LLVM’s link time optimizations. LTO can produce better optimized code, using whole-program analysis, at the cost of longer linking time.
+incremental = true
+
 [future-incompat-report]
 frequency = 'always' # when to display a notification about a future incompat report
 
