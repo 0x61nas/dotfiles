@@ -14,6 +14,7 @@ Xft.autohint:   false
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 Xft.rgba: rgb
+Xft.dpi: 110
 
 ! xterm ----------------------------------------------------------------------
 xterm*geometry:           100x25
