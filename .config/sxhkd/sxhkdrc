@@ -53,7 +53,7 @@ ctrl + alt + Print
 
 # Manage brightness
 XF86MonBrightness{Up,Down}
-    sh $HOME/.scripts/brightness {up,down}
+    xbacklight -{inc,dec} 5
 
 # Manage Volume
 XF86Audio{Raise,Lower}Volume
