@@ -35,23 +35,26 @@ super + shift; {d,o}
 
 ##---------- System Keys ----------##
 
-# Take a screenshot
-Print
-	sh $HOME/.scripts/screenshot
+# Take a screenshot in the clipboard
+shift + Print
+	screenshot -n -c
 	
-# Take screenshot in a specific area
-alt + Print	
-	sh $HOME/.scripts/screenshot --region
+Print	
+	screenshot -r -n -c
 
-# Take screenshot of active window
 ctrl + Print
-	sh $HOME/.scripts/screenshot --activewindow
+	screenshot --activewindow -n -c
 
-# Take screenshot of area and copy to clipboard
-ctrl + alt + Print
-	sh $HOME/.scripts/screenshot --fullscreen --background --copy-image
+# Take a screenshot and save it
+alt + shift + Print
+	screenshot -n
+	
+alt + Print	
+	screenshot -r -n
 
-# Manage brightness
+alt + ctrl + Print
+	screenshot --activewindow -n
+
 XF86MonBrightness{Up,Down}
     xbacklight -{inc,dec} 5
 
