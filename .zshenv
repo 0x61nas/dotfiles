@@ -22,6 +22,7 @@ export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/.config/emacs/bin:$HOME/.emacs.d/bin"
 export PATH="$PATH:/snap/bin"
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.nimbel/bin"
 
 ### cargo ###
 export CARGO_TARGET_DIR=$HOME/.cargo-target

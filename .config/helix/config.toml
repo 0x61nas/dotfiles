@@ -1,0 +1,55 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "relative"
+mouse = true
+cursorline = true
+true-color = true
+color-modes = true
+completion-replace = true
+rulers = [100, 160]
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.smart-tab]
+enable = false
+
+[keys.normal]
+j = "no_op"
+k = "command_palette"
+l = "no_op"
+t = "move_char_left"
+s = "move_line_up"
+h = "move_char_right"
+e = "move_line_down"
+Y = ":clipboard-yank"

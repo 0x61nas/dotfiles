@@ -1,0 +1,63 @@
+[language-server.rust-analyzer]
+timeout = 120
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+
+[language-server.typos]
+command = "typos-lsp"
+
+[language-server.asm]
+command = "asm-lsp"
+
+[[language]]
+name = "rust"
+roots = ["Cargo.toml"]
+text-width = 100
+language-servers = ["rust-analyzer", "typos"]
+[language.indent]
+tab-width = 4
+unit = " "
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[[language]]
+name = "nasm"
+file-types = ["asm", "fasm", "nasm"]
+scope = "*.asm"
+language-servers = ["typos", "asm"]
+
+[language.indent]
+tab-width = 2
+unit = " "
+
+[[language]]
+name = "markdown"
+language-servers = ["typos"]
+
+[[language]]
+name = "bash"
+formatter = { command = "beautysh", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "julia"
+auto-format = true
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+
+[[language]]
+name = "python"
+#language-server = { command = "ruff-lsp" }
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true

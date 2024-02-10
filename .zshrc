@@ -5,8 +5,10 @@ source "$HOME/.config/shell/setup.sh"
 setopt correct     # Auto corect mistakes
 setopt nobeep     # No beep
 setopt dvorak    # Use the Dvorak keyboard instead of the standard qwerty keyboard
-setopt correctall # Try to correct the spelling of all arguments in a line.
 setopt aliases    # Expand aliases
+setopt autocd
+setopt cdablevars
+setopt multios
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -103,12 +105,4 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-# Auto open tmux session
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-# exec tmux
-# fi
-
-# OCaml
-# [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
