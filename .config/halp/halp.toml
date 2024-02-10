@@ -1,0 +1,52 @@
+check_version = true
+check_help = true
+check = [["-v", "-V", "--version", "version"], ["-h", "--help", "help", "-H"]]
+man_command = "man"
+pager_command = "less -R"
+
+[plz_menu]
+selected_pos = "Center"
+
+[[plz_menu.entries]]
+display_msg = "Show man page"
+
+[plz_menu.entries.operation]
+run = "man {cmd}"
+
+[[plz_menu.entries]]
+display_msg = "Show cheat.sh page"
+
+[plz_menu.entries.operation]
+user-agent = "fetch"
+fetch = "https://cheat.sh/{cmd}{?/{subcommand}}{? {args}}"
+
+[[plz_menu.entries]]
+display_msg = "Show eg page"
+
+[plz_menu.entries.operation]
+fetch = "https://raw.githubusercontent.com/srsudar/eg/master/eg/examples/{cmd}.md"
+
+[[plz_menu.entries]]
+display_msg = "Show cheatsheets page"
+
+[plz_menu.entries.operation]
+fetch = "https://raw.githubusercontent.com/cheat/cheatsheets/master/{cmd}"
+
+[[plz_menu.entries]]
+display_msg = "Show info page"
+
+[plz_menu.entries.operation]
+file = "~/info-pages/{cmd}.md"
+
+[[plz_menu.entries]]
+display_msg = "The TLDR page"
+
+[plz_menu.entries.operation]
+run = "tldr {cmd}"
+use-pager = "true"
+
+[[plz_menu.entries]]
+display_msg = "The navi fuzzy search page"
+
+[plz_menu.entries.operation]
+run = "navi --query '{cmd}{? {subcommand}}'"
