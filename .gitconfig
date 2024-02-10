@@ -73,6 +73,7 @@
   unshelve = stash apply && git stash drop
   sync = !git fetch && git rebase origin/$(git symbolic-ref --short HEAD)
   upstream = branch --set-upstream-to
-	ignore = !echo "$1" >> .gitignore
-	rebase = rebase -S
+  ignore = !echo "$1" >> .gitignore
+  rebase = rebase -S
+  addp = add --patch
 
