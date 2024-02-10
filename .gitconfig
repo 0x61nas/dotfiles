@@ -15,7 +15,7 @@
 	email = anas.elgarhy.dev@gmail.com
 	signingkey = 0E4F7AB7210FA2856F1AAD7E38442349DD00D8C6
 [core]
-  editor = nvim
+	editor = helix
   pager = delta
   autocrlf = input
   safecrlf = true
