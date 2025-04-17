@@ -40,7 +40,7 @@ _fix_cursor() {
 
 function _update_prompt {
 	# PROMPT="[ $(shrink_path)  ]%(!.#.$) "
-	export PS1="[ $(shrink_path)  ]%(!.#.$) "
+	export PS1="[ $(shrink_path)  ]<%?>%(!.#.$) "
 }
 
 autoload -Uz add-zsh-hook
