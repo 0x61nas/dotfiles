@@ -4,3 +4,12 @@
 [submodule "home/.config/gdb/gef"]
 	path = home/.config/gdb/gef
 	url = https://github.com/hugsy/gef.git
+[submodule "home/.config/tmux/resurrect"]
+	path = home/.config/tmux/resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "home/.config/tmux/continum"]
+	path = home/.config/tmux/continum
+	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule "home/.config/tmux/prefix-highlight"]
+	path = home/.config/tmux/prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight
