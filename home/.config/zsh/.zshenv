@@ -4,6 +4,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
+export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
+
 # Only source this once
 if [[ -z "$__HM_ZSH_SESS_VARS_SOURCED" ]]; then
   export __HM_ZSH_SESS_VARS_SOURCED=1
@@ -31,6 +33,7 @@ export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:/snap/bin"
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 export PATH="$PATH:$HOME/.nimbel/bin"
+export PATH="$PATH:/opt/xtensa-lx106-elf-gcc/bin"
 
 ### zoxide ###
 export _ZO_ECHO=1
@@ -39,4 +42,7 @@ export _ZO_ECHO=1
 export CARGO_TARGET_DIR=$HOME/.cargo-target
 export CARGO_MOMMYS_LITTLE="boy/baby"
 # export PATH="$PATH:$CARGO_TARGET_DIR/release"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
+if [ -d "$HOME/.cargo/bin" ]; then
+    PATH="$PATH:$HOME/.cargo/bin"
+fi

@@ -58,22 +58,15 @@ _comp_options+=(globdots)		# Include hidden files.
 # Enable fish style features
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '^ ' autosuggest-toggle
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions.zsh
 # Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && 
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/doc/find-the-command/ftc.zsh su
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source ~/.config/zsh/plugins/zsh-history-substring-search.zsh
 # source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
-
-
-# Offer to install missing package if command is not found
-if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-    source /usr/share/zsh/functions/command-not-found.zsh
-    export PKGFILE_PROMPT_INSTALL_MISSING=1
-fi
+source ~/.config/zsh/plugins/nota.zsh
+source ~/.config/zsh/plugins/nekojump.plugin.zsh
 
 # Key bindings section
 # vi mode
@@ -191,3 +184,9 @@ GPG_TTY="$(tty)"
 export GPG_TTY
 gpg-connect-agent updatestartuptty /bye > /dev/null
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+source /home/anas/.config/broot/launcher/bash/br

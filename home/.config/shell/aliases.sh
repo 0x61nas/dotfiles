@@ -6,8 +6,6 @@ alias l='ls -lh'
 alias la='l -a'
 
 # navigation
-alias cd='z'
-alias cdi='zi'
 alias ~='cd ~'
 alias .-='cd -'
 alias cd..='cd ..'
@@ -46,27 +44,51 @@ alias ks='keybase chat send'
 alias ksr='keybase chat read'
 alias kl='keybase chat list'
 
-
 # Git
 alias g='git'
 alias gc='git checkout'
 alias gpush='git push'
-alias gpusht='push --tags'
-alias gpushf='push --force'
-alias gcomm='git commit -S'
+alias gpusht='git push --tags'
+alias gpushf='git push --force'
+alias gcommit='git commit -S'
 alias clone='git clone'
 alias sclone='git clone --depth=1'
 alias gadd='git add'
+alias gaddall='git add .'
 alias gaddp='git addp'
-alias gst='git status'
+alias gstat='git status'
 alias gpull='git pull -r --autostash'
-alias gfet='git fetch'
+alias gfetch='git fetch'
 alias grebase='git rebase'
 alias gtag='git tag'
 alias gctag='tag --sign'
 alias gswitch='git switch'
 alias gah='git stash && git pull --rebase && git stash pop'
 alias ghpr='gh pr create -t $(git show -s --format=%s HEAD) -b $(git show -s --format=%B HEAD | tail -n+3)'
+alias glog='git log --oneline --graph --all'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gamend='git commit --amend'
+alias gpushu='git push -u origin'
+alias gsw='git switch'
+alias gswc='git switch -c'
+alias gbd='git branch -D'
+alias gpullff='git pull --ff-only'
+alias gfetchm='git fetch origin main'
+alias grho='git reset --hard origin/main'
+alias gcof='git checkout -- .'
+alias grebo='git rebase origin/main'
+alias grebi='git rebase -i'
+alias grebo_onto='git rebase --onto'
+alias gcp='git cherry-pick'
+alias gstash='git stash'
+alias gpop='git stash pop'
+alias gsl='git stash list'
+alias grau='git remote add upstream'
+alias gbis='git bisect'
+alias grfl='git reflog'
+alias gclean=' git clean -fdx'
+alias gcleani=' git clean -fdxi'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -120,21 +142,19 @@ alias dreset='docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)
 # Arch
 alias paru="paru --sudo $SUDO"
 install() {
-    $SUDO pacman -S $@ || $AURHELPER -S $@
+	$SUDO pacman -S $@ || $AURHELPER -S $@
 }
 search() {
-    pacman -Ss $@ || $AURHELPER -Ss $@
+	pacman -Ss $@ || $AURHELPER -Ss $@
 }
 update() {
-    $SUDO pacman -Su || $AURHELPER -Su
+	$SUDO pacman -Su || $AURHELPER -Su
 }
 remove() {
-    $SUDO pacman -Rns $@
+	$SUDO pacman -Rns $@
 }
 alias i='install'
 alias s='search'
 alias u='update'
 alias un='remove'
 alias fuck-my-lap='sudo pacman -Syyu'
-
-
