@@ -1,0 +1,18 @@
+theme = Gruvbox Dark Hard
+# background-image = ~/Pictures/reiko_back.jpeg
+# background-image-opacity = 0.25
+font-family = Iosevka
+window-padding-x = 2
+window-vsync = true
+window-save-state = always
+window-subtitle = false
+window-decoration = none
+window-theme = ghostty
+quick-terminal-position = bottom
+quick-terminal-size = 40%
+shell-integration-features = true
+# gtk-tabs-location = bottom
+auto-update = off
+# gtk-titlebar-style = tabs
+
+keybind = ctrl+shift+g=toggle_quick_terminal
