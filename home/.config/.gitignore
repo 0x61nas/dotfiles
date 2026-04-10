@@ -1,3 +1,10 @@
 keepassxc/
 gh/hosts.yml
 libvirt/
+cava/shaders/
+xfce4/
+font-manager/
+cmus/
+!cmus/autosave
+zsh/.zcompdump
+spotify/
