@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Path
+Target = *
+
+[Action]
+Description = Restore keyboard layout after system state change
+When = PostTransaction
+Exec = /usr/bin/setxkbmap -model pc104 -layout us,ara -variant dvorak-l, -option grp:win_space_toggle caps:swapescape keypad:pointerkeys

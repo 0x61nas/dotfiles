@@ -14,7 +14,7 @@ EDITOR=nvim
 TERMINAL=st
 PAGER=less
 SUDO=doas
-BROWSER=firefox
+BROWSER=floorp
 NAME DEFAULT="Anas Elgarhy"
 USERNAME=0x61nas
 EMAIL=anas.elgarhy.dev@gmail.com
@@ -50,4 +50,6 @@ WINEDEBUG=fixme-all
 # R = raw terminal characters (fixes git diff)
 #     see http://jugglingbits.wordpress.com/2010/03/24/a-better-less-playing-nice-with-git/
 LESS DEFAULT="-F -X -R"
+
+MANPAGER DEFAULT="bat --language=man -p --tabs 2"
 
